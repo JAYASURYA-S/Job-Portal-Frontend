@@ -1,0 +1,94 @@
+.cardContainer {
+  width: 316px;
+  height: 360px;
+  border-radius: 12px;
+  box-shadow: 0 0 14px 0 #d3d3d326 !important;
+  padding: 5px;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  height: 83px;
+  width: 83px;
+  border-radius: 13px;
+  border: 1px solid #ffffff;
+  box-shadow: 0 0 10px 0 #94949440 !important;
+  background: linear-gradient(to bottom, #fefefd, #f1f1f1);
+}
+
+.durationShow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 33px;
+  padding: 10px;
+  background-color: #b0d9ff;
+  border-radius: 10px;
+}
+
+.durationShow p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+}
+
+.jobTitleText p {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.experienceSection,
+.jobTypeSection,
+.salarySection {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.experienceSection,
+.jobTypeSection,
+.salarySection p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #5a5a5a;
+}
+
+.jobDescriptionText {
+  padding: 0 15px;
+}
+
+.jobDescriptionText ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.jobDescriptionText p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555555;
+  text-align: justify;
+}
+
+.applyBtn {
+  width: 100% !important;
+  height: 46px !important;
+  border-radius: 10px !important;
+  background-color: #00aaff !important;
+  color: #ffffff !important;
+  text-transform: none !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
