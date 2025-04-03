@@ -66,7 +66,7 @@ function App() {
 
   return (
     <>
-      <Grid container item sx={{ padding: "0 20px" }}>
+      <Grid container sx={{ padding: "0 20px" }}>
         <Navbar
           selectedJobTitle={selectedJobTitle}
           setSelectedJobTitle={setSelectedJobTitle}

@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  flex-grow: 1;
 }
 
 .logoIcon {
@@ -29,11 +30,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 75px;
+  min-width: 0;
+  max-width: 75px;
   height: 33px;
-  padding: 10px;
+  padding: 5px;
   background-color: #b0d9ff;
   border-radius: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .durationShow p {
@@ -41,6 +46,9 @@
   font-weight: 500;
   color: #000000;
   text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .jobTitleText p {
@@ -53,20 +61,27 @@
 .jobTypeSection,
 .salarySection {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 5px;
+  max-width: 110px; /* Adjust width as needed */
 }
 
 .experienceSection,
 .jobTypeSection,
 .salarySection p {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   color: #5a5a5a;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .jobDescriptionText {
   padding: 0 15px;
+  height: 100px; /* Fixed height */
+  overflow-y: auto; /* Scroll if content overflows */
 }
 
 .jobDescriptionText ul {

@@ -6,7 +6,6 @@ const JobList = ({ allJobsData }) => {
   return (
     <Grid
       container
-      item
       sx={{
         display: "flex",
         flexWrap: "wrap",
@@ -14,7 +13,7 @@ const JobList = ({ allJobsData }) => {
       }}
     >
       {allJobsData?.map((job, index) => (
-        <Grid item xs={12} sm={2} md={2} key={index}>
+        <Grid container key={index}>
           <JobCard job={job} />
         </Grid>
       ))}

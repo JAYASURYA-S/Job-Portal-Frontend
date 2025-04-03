@@ -24,9 +24,9 @@ const JobCard = ({ job }) => {
         if (diffHours < 1) {
           setTimeAgo("Just now");
         } else if (diffHours < 24) {
-          setTimeAgo(`${diffHours} ${diffHours < 2 ? "hour" : "hours"} ago`);
+          setTimeAgo(`${diffHours}h ago`);
         } else {
-          setTimeAgo(`${diffDays} ${diffDays < 2 ? "day" : "days"} ago`);
+          setTimeAgo(`${diffDays}d ago`);
         }
       };
 
@@ -40,44 +40,49 @@ const JobCard = ({ job }) => {
   return (
     <Card sx={{ m: 2, boxShadow: 3 }} className="cardContainer">
       <CardContent className="cardContent">
+        {/**Company Logo and duration */}
         <Grid
           container
-          item
           xs={12}
           sx={{ display: "flex", justifyContent: "space-between" }}
         >
-          <Grid item className="logoIcon">
+          <Grid className="logoIcon">
             <img src={AmazonIcon2} alt="logo" />
           </Grid>
-          <Grid item className="durationShow">
+          <Grid className="durationShow">
             <p>{timeAgo}</p>
           </Grid>
         </Grid>
-        <Grid container item xs={12} className="jobTitleText">
+
+        {/**Title*/}
+        <Grid container className="jobTitleText">
           <p>{job?.jobTitle}</p>
         </Grid>
+
+        {/**Experience, Job type, Salary range*/}
         <Grid
           container
-          item
-          xs={12}
           sx={{ display: "flex", justifyContent: "space-between" }}
+          className='expAndTypeAndSalaryContainer'
         >
-          <Grid item className="experienceSection">
+          <Grid className="experienceSection">
             <img src={ExpIcon} alt="Experience" />
             <p>{`${job?.experience?.min} - ${job?.experience?.max} yrs Exp`}</p>
           </Grid>
-          <Grid item className="jobTypeSection">
+          <Grid className="jobTypeSection">
             {" "}
             <img src={JobTypeIcon} alt="Job type" />
             <p>{job?.jobType[0]}</p>
           </Grid>
-          <Grid item className="salarySection">
+          <Grid className="salarySection">
             {" "}
             <img src={SalaryRangeIcon} alt="Salary" />
             <p>{job?.salary?.max}LPA</p>
           </Grid>
         </Grid>
-        <Grid container item xs={12} className="jobDescriptionText">
+
+        {/**Description*/}
+        <Grid container className="jobDescriptionText">
           <ul>
             {job?.description?.split(".")?.map((point, index) => (
               <li key={index}>
@@ -86,7 +91,9 @@ const JobCard = ({ job }) => {
             ))}
           </ul>
         </Grid>
-        <Grid container item xs={12}>
+
+        {/**Button*/}
+        <Grid container>
           {" "}
           <Button fullWidth className="applyBtn">
             Apply Now

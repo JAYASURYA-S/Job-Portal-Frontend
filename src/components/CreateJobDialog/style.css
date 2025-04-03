@@ -1,10 +1,10 @@
 .saveDraftBtn {
   background-color: #ffffff !important;
-  width: 232px !important;
+  /* width: 232px !important; */
   height: 59px !important;
   text-transform: none !important;
   border-radius: 10px !important;
-  padding: 16px 60px !important;
+  /* padding: 16px 60px !important; */
   border: 1.5px solid #222222 !important;
   box-shadow: 0 0 4px 0 #00000040 !important;
   font-size: 16px;
@@ -17,11 +17,11 @@
 
 .publishBtn {
   background-color: #00aaff !important;
-  width: 207px !important;
+  /* width: 232px !important; */
   height: 59px !important;
   text-transform: none !important;
   border-radius: 10px !important;
-  padding: 16px 60px !important;
+  /* padding: 16px 60px !important; */
   box-shadow: 0 0 4px 0 #00000040 !important;
   font-size: 16px;
   font-weight: 600;
@@ -29,4 +29,10 @@
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.heading{
+  font-size: 18px;
+  font-weight: 600;
+  color: #636363;
 }
