@@ -43,7 +43,6 @@ const JobCard = ({ job }) => {
         {/**Company Logo and duration */}
         <Grid
           container
-          xs={12}
           sx={{ display: "flex", justifyContent: "space-between" }}
         >
           <Grid className="logoIcon">
@@ -63,7 +62,7 @@ const JobCard = ({ job }) => {
         <Grid
           container
           sx={{ display: "flex", justifyContent: "space-between" }}
-          className='expAndTypeAndSalaryContainer'
+          className="expAndTypeAndSalaryContainer"
         >
           <Grid className="experienceSection">
             <img src={ExpIcon} alt="Experience" />

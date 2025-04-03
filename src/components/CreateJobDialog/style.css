@@ -1,4 +1,5 @@
-.saveDraftBtn {
+.saveDraftBtn,
+.openDraftBtn {
   background-color: #ffffff !important;
   /* width: 232px !important; */
   height: 59px !important;

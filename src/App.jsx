@@ -7,7 +7,7 @@ import { useState } from "react";
 import HomeIcon from "./assets/GroupIcon.svg";
 
 function App() {
-  const { allJobsData, isLoading, isError } = useJobContext();
+  const { allJobsData, isLoading } = useJobContext();
 
   // State variable for selected job types
   const [selectedJobTitle, setSelectedJobTitle] = useState("");
@@ -55,15 +55,15 @@ function App() {
     );
   });
 
-  console.log({ allJobsData, isLoading, isError });
-  console.log({
-    selectedJobTitle,
-    selectedJobTypes,
-    selectedLocations,
-    salaryRange,
-  });
+  // console.log({ allJobsData, isLoading, isError });
+  // console.log({
+  //   selectedJobTitle,
+  //   selectedJobTypes,
+  //   selectedLocations,
+  //   salaryRange,
+  // });
 
-  console.log("filteredJobs", filteredJobs);
+  // console.log("filteredJobs", filteredJobs);
 
   if (isLoading) {
     return (

@@ -23,7 +23,7 @@ export const JobProvider = ({ children }) => {
     },
   });
 
-  console.log({ allJobsData, isLoading, isError, error });
+  // console.log({ allJobsData, isLoading, isError, error });
 
   return (
     <JobContext.Provider value={{ allJobsData, isLoading, isError, error }}>

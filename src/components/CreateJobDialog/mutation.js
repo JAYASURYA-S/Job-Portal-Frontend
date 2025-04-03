@@ -19,3 +19,21 @@ export const postDraftJob = async (payload) => {
     // alert(error.message);
   }
 };
+
+export const getJobDrafts = async () => {
+  try {
+    const response = await axiosInstance.get("/jobs/drafts");
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const deleteDraft = async (id) => {
+  try {
+    const response = await axiosInstance.delete(`/jobs/drafts/${id}`);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};

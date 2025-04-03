@@ -16,8 +16,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 890px;
-  max-height: 80px;
+  width: 70%;
+  height: 70px;
   margin: 20px auto;
   border-radius: 122px;
   border: 1px solid #fcfcfc;
