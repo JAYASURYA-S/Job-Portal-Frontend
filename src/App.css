@@ -18,3 +18,8 @@
   /* align-items: center; */
   background-color: #fbfbff;
 }
+
+/* For hiding scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}

@@ -1,9 +1,10 @@
-import { Grid } from "@mui/material";
+import { CircularProgress, Grid } from "@mui/material";
 import "./App.css";
 import JobList from "./components/JobList/index.jsx";
 import Navbar from "./components/Navbar/index.jsx";
 import { useJobContext } from "./context/useJobContext.jsx";
 import { useState } from "react";
+import HomeIcon from "./assets/GroupIcon.svg";
 
 function App() {
   const { allJobsData, isLoading, isError } = useJobContext();
@@ -63,6 +64,38 @@ function App() {
   });
 
   console.log("filteredJobs", filteredJobs);
+
+  if (isLoading) {
+    return (
+      <Grid
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+        }}
+      >
+        {/* <CircularProgress /> */}
+        <img
+          src={HomeIcon}
+          alt="Loading..."
+          style={{
+            width: "50px", // Adjust size as needed
+            height: "50px",
+            animation: "spin 2s linear infinite",
+          }}
+        />
+        <style>
+          {`
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        `}
+        </style>
+      </Grid>
+    );
+  }
 
   return (
     <>
