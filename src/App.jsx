@@ -1,4 +1,4 @@
-import { CircularProgress, Grid } from "@mui/material";
+import { Button, CircularProgress, Grid } from "@mui/material";
 import "./App.css";
 import JobList from "./components/JobList/index.jsx";
 import Navbar from "./components/Navbar/index.jsx";
@@ -7,7 +7,7 @@ import { useState } from "react";
 import HomeIcon from "./assets/GroupIcon.svg";
 
 function App() {
-  const { allJobsData, isLoading } = useJobContext();
+  const { allJobsData, isLoading, isError } = useJobContext();
 
   // State variable for selected job types
   const [selectedJobTitle, setSelectedJobTitle] = useState("");
@@ -93,6 +93,21 @@ function App() {
           }
         `}
         </style>
+      </Grid>
+    );
+  }
+
+  if (isError) {
+    return (
+      <Grid
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+        }}
+      >
+        <p style={{ color: "red" }}>Error occured</p>
       </Grid>
     );
   }
