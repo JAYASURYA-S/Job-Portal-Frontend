@@ -37,6 +37,13 @@ const JobCard = ({ job }) => {
     }
   }, [job?.createdAt]);
 
+  //filter the description for empty string
+  const filteredDescription =
+    job?.description
+      ?.split(".")
+      ?.map((point) => point.trim())
+      ?.filter((point) => point !== "") || [];
+
   return (
     <Card sx={{ m: 2, boxShadow: 3 }} className="cardContainer">
       <CardContent className="cardContent">
@@ -83,9 +90,9 @@ const JobCard = ({ job }) => {
         {/**Description*/}
         <Grid container className="jobDescriptionText">
           <ul>
-            {job?.description?.split(".")?.map((point, index) => (
+            {filteredDescription?.map((point, index) => (
               <li key={index}>
-                <p>{point.trim()}</p>
+                <p>{point}</p>
               </li>
             ))}
           </ul>
