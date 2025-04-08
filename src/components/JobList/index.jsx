@@ -11,11 +11,13 @@ const JobList = ({ allJobsData }) => {
         display: "flex",
         flexWrap: "wrap",
         width: "100%",
+        justifyContent: isMobile && "center",
         marginTop: isMobile ? "400px" : "200px", // Allow wrapping of items in smaller screens
+        // gap: "10px",
       }}
     >
       {allJobsData?.map((job, index) => (
-        <Grid container key={index} size={{ xs: 12, sm: 6, lg: 4 }}>
+        <Grid container key={index}>
           <JobCard job={job} />
         </Grid>
       ))}

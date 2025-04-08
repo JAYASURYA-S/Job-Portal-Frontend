@@ -55,15 +55,6 @@ function App() {
     );
   });
 
-  // console.log({ allJobsData, isLoading, isError });
-  // console.log({
-  //   selectedJobTitle,
-  //   selectedJobTypes,
-  //   selectedLocations,
-  //   salaryRange,
-  // });
-
-  // console.log("filteredJobs", filteredJobs);
 
   if (isLoading) {
     return (
